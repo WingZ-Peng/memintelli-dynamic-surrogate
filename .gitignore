@@ -1,0 +1,16 @@
+# Collected Exact samples. Regenerated deterministically by the collect stage
+# from the protocol seeds; about 254 MB, so they are not tracked here.
+outputs/three_head/context_shards/
+
+# Atomic-write temporaries. A crash mid-write can leave these behind.
+*.tmp
+
+# Python caches
+__pycache__/
+*.py[cod]
+
+# Environments and editor state
+.venv/
+venv/
+.vscode/
+.idea/

@@ -1,0 +1,102 @@
+{
+  "schema_version": 1,
+  "status": "materialized_frozen",
+  "scope": "fixed privileged-feature upper-bound comparison",
+  "input_shape": [
+    5,
+    16
+  ],
+  "weight_shape": [
+    16,
+    10
+  ],
+  "g_static_shape": [
+    2,
+    2,
+    3,
+    8,
+    8
+  ],
+  "tensor_dtype": "torch.float32",
+  "parallel_size": [
+    8,
+    8
+  ],
+  "slice_method": [
+    1,
+    1,
+    2
+  ],
+  "s_tile_shape": [
+    1,
+    2,
+    2,
+    8,
+    8
+  ],
+  "target_dim": 100,
+  "feature_dim": 143,
+  "bias": false,
+  "maximum_log_variance_ratio": 4.0,
+  "correlation_rank": 64,
+  "correlation_training_steps": 5000,
+  "engine": {
+    "HGS": 1e-05,
+    "LGS": 1e-07,
+    "g_level": 16,
+    "write_variation": 0.02,
+    "read_variation": 0.05,
+    "vnoise": 0.02,
+    "rdac": 16,
+    "radc": 256,
+    "vread": 0.2,
+    "rate_stuck_HGS": 0.0,
+    "rate_stuck_LGS": 0.0
+  },
+  "case": {
+    "path": "artifacts/fixed_case.pt",
+    "sha256": "48f43bfce851923b77a27a2b14118de28efe6c2296298be1bb4002672dbdafc9",
+    "source_sha256": "694aa278309d72d74031f225b17d49c46bba9c04b7414118b5fcd6090c8bd086",
+    "weight_sha256": "78e9bce5e6465b58703b4547d803cb0c3b674039e14ecae187bdcbf3f94b80b4",
+    "g_static_sha256": "5cfea04013342757308c63d7ed5bbdf4b4efe27dc146f580b0cb3ce69d94857a",
+    "context_offset": 1056,
+    "context_end_offset": 1087,
+    "contexts": 32
+  },
+  "artifacts": {
+    "source_manifest": {
+      "path": "artifacts/fixed_case_source_manifest.json",
+      "sha256": "406aa982b35518a7ee3e6af6df6b1518bfff4f63c554b79261647cea42467baf"
+    },
+    "mean": {
+      "path": "artifacts/conditional_mean_model.pt",
+      "sha256": "29f6419249fdddbe7489ebf0a8c89bfb05b68ce4ec9a1c32000d69c51dad6125"
+    },
+    "variance": {
+      "path": "artifacts/variance_model_1024_contexts.pt",
+      "sha256": "9654a76ac7c38296f21009631089cc179e7a046d06f95e0d998edcaf654db04f"
+    },
+    "correlation": {
+      "path": "artifacts/correlation_rank_64_training.pt",
+      "sha256": "72b161ea317c7aa7e2cb537e9fc2780f01872dd78870db5b07f3e5945c07ec7b"
+    }
+  },
+  "implementation": {
+    "path": "artifacts/implementation_manifest.json",
+    "sha256": "9560ad2674ba2cabc8025a7e40c946dcc9bdd54291891dd818449a5d7fab5892"
+  },
+  "data_lifecycle": {
+    "input_block": "historical_engineering_smoke_offsets_1056_1087_consumed",
+    "kind": "historical_engineering_smoke",
+    "consumed": true,
+    "forbidden_offset_ranges": [
+      [
+        1088,
+        1119
+      ]
+    ],
+    "is_untouched_test": false,
+    "for_model_selection": false,
+    "for_architecture_selection": false
+  }
+}

@@ -1,0 +1,190 @@
+{
+  "schema_version": 1,
+  "status": "pilot_ready",
+  "name": "ideal_dynamic_three_head_consolidated",
+  "scope": "Fixed weight, ideal quantized/sliced conductance, held-out inputs, dynamic read/voltage noise only. Consolidated three-head pipeline: conditional mean, scheduled conditional variance, and a physically structured correlation head over the voltage/conductance noise sources.",
+  "supersedes": {
+    "legacy_protocol": "configs/protocol.json",
+    "legacy_package": "ideal_dynamic/",
+    "note": "The v1 protocol, package and checkpoints are retained unmodified because four sibling experiments pin their SHA-256. This protocol writes to outputs/three_head/ and never touches them."
+  },
+  "source": {
+    "fixed_case": "memintelli_surrogate_comparison/artifacts/fixed_case.pt",
+    "fixed_case_sha256": "48f43bfce851923b77a27a2b14118de28efe6c2296298be1bb4002672dbdafc9",
+    "fixed_contract": "memintelli_surrogate_comparison/artifacts/fixed_contract.json",
+    "fixed_contract_sha256": "a37ac879581a56dec3ccae78a4efad3657764d44a9f1acccd974e41472a2b747",
+    "implementation_manifest": "memintelli_surrogate_comparison/artifacts/implementation_manifest.json",
+    "implementation_manifest_sha256": "9560ad2674ba2cabc8025a7e40c946dcc9bdd54291891dd818449a5d7fab5892"
+  },
+  "fixed_axes": {
+    "weight": true,
+    "input_shape": [
+      5,
+      16
+    ],
+    "weight_shape": [
+      16,
+      10
+    ],
+    "parallel_size": [
+      8,
+      8
+    ],
+    "slice_method": [
+      1,
+      1,
+      2
+    ],
+    "s_tile_shape": [
+      1,
+      2,
+      2,
+      8,
+      8
+    ],
+    "valid_s_tile_coordinates": 100,
+    "write_variation_in_target": 0.0,
+    "stuck_fault_rates_in_target": [
+      0.0,
+      0.0
+    ],
+    "read_variation": 0.05,
+    "vnoise": 0.02
+  },
+  "source_structure": {
+    "voltage_source_dim": 24,
+    "conductance_source_dim": 24,
+    "voltage_sharing": "same k_block and same row_index",
+    "conductance_sharing": "same k_block and same out_index",
+    "anchor_feature_slice": [
+      0,
+      48
+    ],
+    "anchor_is_unit_norm": true,
+    "expected_voltage_groups": 10,
+    "expected_conductance_groups": 20,
+    "structurally_nonzero_offdiagonal_entries": 1300
+  },
+  "feature_contracts": {
+    "mean": {
+      "name": "deterministic_mean_v_g_adc",
+      "dimensions": 138
+    },
+    "variance": {
+      "name": "deterministic_noise_energy_adc",
+      "dimensions": 138
+    },
+    "correlation": {
+      "name": "deterministic_shared_source_loading",
+      "dimensions": 118
+    }
+  },
+  "heads": {
+    "mean": {
+      "hidden_dim": 128,
+      "coordinate_dim": 16,
+      "steps": 1000,
+      "batch_contexts": 64,
+      "learning_rate": 0.001,
+      "weight_decay": 0.0001,
+      "huber_beta": 0.5,
+      "schedule": "cosine",
+      "warmup_steps": 50,
+      "gradient_clip": 10.0,
+      "report_every": 20
+    },
+    "variance": {
+      "hidden_dim": 128,
+      "coordinate_dim": 16,
+      "steps": 2000,
+      "batch_contexts": 64,
+      "learning_rate": 0.001,
+      "weight_decay": 0.0001,
+      "huber_beta": 0.5,
+      "maximum_log_variance_ratio": 4.0,
+      "schedule": "cosine",
+      "warmup_steps": 50,
+      "gradient_clip": 10.0,
+      "report_every": 20
+    },
+    "correlation": {
+      "hidden_dim": 128,
+      "coordinate_dim": 16,
+      "source_dim": 24,
+      "steps": 2000,
+      "batch_contexts": 32,
+      "learning_rate": 0.0005,
+      "weight_decay": 0.0001,
+      "residual_logit_bias": 6.0,
+      "delta_bound": 0.15,
+      "matrix_weight": 1.0,
+      "negative_log_likelihood_weight": 0.25,
+      "anchor_penalty_weight": 10.0,
+      "schedule": "constant",
+      "warmup_steps": 0,
+      "gradient_clip": 10.0,
+      "report_every": 20
+    }
+  },
+  "splits": {
+    "train": {
+      "input_count": 256,
+      "input_seed": 210000000,
+      "samples_per_context": 512,
+      "exact_seed_base": 220000000,
+      "contexts_per_shard": 16
+    },
+    "validation": {
+      "input_count": 64,
+      "input_seed": 310000000,
+      "samples_per_context": 1024,
+      "exact_seed_base": 320000000,
+      "contexts_per_shard": 16
+    },
+    "test": {
+      "input_count": 64,
+      "input_seed": 410000000,
+      "samples_per_context": 2048,
+      "exact_seed_base": 420000000,
+      "contexts_per_shard": 16
+    }
+  },
+  "seed_contract": {
+    "exact_context_stride": 10000,
+    "surrogate_seed_base": 510000000,
+    "model_seed_base": 550000000
+  },
+  "evaluation": {
+    "exact_candidate_samples": 1024,
+    "exact_reference_samples": 1024,
+    "surrogate_samples": 1024,
+    "quantiles": [
+      0.05,
+      0.5,
+      0.95
+    ],
+    "sliced_wasserstein_projections": 32,
+    "methods": [
+      "exact_independent_split",
+      "conditional_three_head",
+      "analytic_correlation_three_head",
+      "shuffled_input_features",
+      "shared_three_head",
+      "nominal_only"
+    ],
+    "correlation_predictors": [
+      "exact_independent_split",
+      "identity",
+      "shared_empirical",
+      "analytic_first_order",
+      "structured_conditional"
+    ]
+  },
+  "execution": {
+    "device": "cuda:0",
+    "dtype": "torch.float32",
+    "atomic_context_shards": true,
+    "identical_resume": true,
+    "output_root": "outputs/three_head"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "files": {
+    "src/memintelli_surrogate_compare/__init__.py": "4dfb8e022e06a65f4ca9fa31122c8edf03230b1e6444e20fa63e5ab51af04eab",
+    "src/memintelli_surrogate_compare/_gaussian.py": "d75183d3fadb5a49c24c2e1769c807eb67bf291cd868e2c46d18573e60a045c7",
+    "src/memintelli_surrogate_compare/backend.py": "13e28295ddbd31efd265db2e70fa7bc0b20379c50455e12795b7ecf6308cb269",
+    "src/memintelli_surrogate_compare/checkpoints.py": "e506241eb45c3062f794579c2be928d31e5671e1e84c91c5e3153457b68b3162",
+    "src/memintelli_surrogate_compare/cli.py": "2f8ed57ceb417618df9ec929a739ba7f51fd26a392dc15248ff9a483e8edc4ee",
+    "src/memintelli_surrogate_compare/conditional_mean.py": "6fa2349ea703facd68b519c8bc1266ab084dcb21052f5fc7257c809009296f39",
+    "src/memintelli_surrogate_compare/contracts.py": "ef2b04b02fac05aaae937437cff63855ae364784ea7d663bf147196ea9034e4a",
+    "src/memintelli_surrogate_compare/features.py": "702c8ad690bf5ab53b46a9bc0ed9cafe32e43515a0d4502b71a66ba33418f221",
+    "src/memintelli_surrogate_compare/materialize.py": "317615584ee00f82ce66d38c9c51f2b267184ae98102ac3630edc87e99764e28",
+    "src/memintelli_surrogate_compare/metrics.py": "b59fa8dba517c6b203afbcbd2eba86b9aa1e22d1d45f16de44d6d9fd49d1d854",
+    "src/memintelli_surrogate_compare/observable_dpe.py": "c380a50b639bb7af80b983664941368e8b133ab0fea5b521c26be0b3b21c1859",
+    "src/memintelli_surrogate_compare/report.py": "11df4ff598f5db182f912e99d3e0d799c062a35588e1447def38b0d9c98a0c02",
+    "src/memintelli_surrogate_compare/runner.py": "c40ba4e3ae64868d27a7fae0dfa581d803c378f21d5c7b1779f8ff4aa6091638",
+    "src/memintelli_surrogate_compare/structured_covariance.py": "0863a2f70a9fc014987252bf76aed604e2f8c20930c6b6eacff6b769cbb1153d",
+    "src/memintelli_surrogate_compare/tail.py": "abe41dfde09242c24e2c01ebbafb89fe54000735deae295a181eaedbe6636fe0",
+    "upstream/memintelli/NN_layers/__init__.py": "6c0d5bbdd631fbcbf6abbf0a526f69f96edd5f34ca299b63b8f19c6e10837185",
+    "upstream/memintelli/NN_layers/activation.py": "207aa379759b77827022f003e5769f4963939ec1cc704093e1d95e9622418026",
+    "upstream/memintelli/NN_layers/convolution.py": "c0b4f95843e733c2366525cbff7d91d9c78078b2a4db55090eeec7f522dfb917",
+    "upstream/memintelli/NN_layers/functions.py": "5f89aca3fd471c792bdd2ac901bf45c3d191c40c9072966610aa333b55b95435",
+    "upstream/memintelli/NN_layers/linear.py": "44434b652563ecf3392cddf823eebc9073c1aa32e53fce4691014bc7fbd342b2",
+    "upstream/memintelli/NN_layers/model_decorators.py": "63b9a15d3280cecf7859633f2bd2776529be200a0876692c1ab0672a718098b9",
+    "upstream/memintelli/NN_models/DeiT.py": "fff69dac6a21006068a147c8a5c80e8c38aa88b749597b354ea3b99dc80545bd",
+    "upstream/memintelli/NN_models/Mobilnetv2.py": "f38dc3565f1e45e1c1038c68a77af006e3973adf4d35567c05645a6e87d25de0",
+    "upstream/memintelli/NN_models/ResNet.py": "cc864a58d3f40c56260d883ed8b2b2e8c4cfd798e64c5c3b07550e4f29fb8c7a",
+    "upstream/memintelli/NN_models/__init__.py": "bd9e5e425f6fd831364ecda752ad2a0389b859f1ee3362aa883acd586b8531ee",
+    "upstream/memintelli/NN_models/lenet5.py": "7ee9e87d0f59bfd1e509f9b24d6ce70f29debde5dac3b77ebe151a19678d4b28",
+    "upstream/memintelli/NN_models/resnet_cifar.py": "67878f0b0b5353d56fadc674fb3d3c4a07abfb831ed8c4284b2ab91d2faeab53",
+    "upstream/memintelli/NN_models/vgg_cifar.py": "7ed43f63080d2b00f512898f039d1854a5a7eeac09f65b7379bbda58f4e8e8b5",
+    "upstream/memintelli/__init__.py": "c87a200eff17cb912095f2eaa2c44476af4c03aa787369d1640bf3cba237f73b",
+    "upstream/memintelli/pimpy/__init__.py": "c17c05f5e52277e8c4d7058e0c4b30f8149aba546872563f8056031dc378fed9",
+    "upstream/memintelli/pimpy/data_formats.py": "799b54f489da3accfa2f36fd297d4a6e213e0c37e50c6745907d8b5026225846",
+    "upstream/memintelli/pimpy/memmat_tensor.py": "70d6fe89d50663daa0c9a71a695a9e3935c3c23c04ffa7dbb679aeee7ce93017",
+    "upstream/memintelli/pimpy/utils.py": "4ad6c306b8ddb8dceb8606652600c22148eef5354ba4e0da65afcefebb8977da"
+  },
+  "hash_algorithm": "sha256",
+  "schema_version": 1,
+  "source_roots": [
+    "src/memintelli_surrogate_compare",
+    "upstream/memintelli"
+  ]
+}

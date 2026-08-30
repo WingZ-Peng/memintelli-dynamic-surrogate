@@ -1,0 +1,67 @@
+=== three_head clean end-to-end run ===
+started_utc=2026-08-26T06:20:31Z
+split=train shard=1/16 contexts=0:16 status=written seconds=44.2
+split=train shard=2/16 contexts=16:32 status=written seconds=42.6
+split=train shard=3/16 contexts=32:48 status=written seconds=46.4
+split=train shard=4/16 contexts=48:64 status=written seconds=44.8
+split=train shard=5/16 contexts=64:80 status=written seconds=44.6
+split=train shard=6/16 contexts=80:96 status=written seconds=42.4
+split=train shard=7/16 contexts=96:112 status=written seconds=42.8
+split=train shard=8/16 contexts=112:128 status=written seconds=40.4
+split=train shard=9/16 contexts=128:144 status=written seconds=42.3
+split=train shard=10/16 contexts=144:160 status=written seconds=43.2
+split=train shard=11/16 contexts=160:176 status=written seconds=41.9
+split=train shard=12/16 contexts=176:192 status=written seconds=43.4
+split=train shard=13/16 contexts=192:208 status=written seconds=42.3
+split=train shard=14/16 contexts=208:224 status=written seconds=43.9
+split=train shard=15/16 contexts=224:240 status=written seconds=40.1
+split=train shard=16/16 contexts=240:256 status=written seconds=47.3
+split=validation shard=1/4 contexts=0:16 status=written seconds=81.6
+split=validation shard=2/4 contexts=16:32 status=written seconds=84.0
+split=validation shard=3/4 contexts=32:48 status=written seconds=88.3
+split=validation shard=4/4 contexts=48:64 status=written seconds=85.2
+split=test shard=1/4 contexts=0:16 status=written seconds=167.3
+split=test shard=2/4 contexts=16:32 status=written seconds=162.0
+split=test shard=3/4 contexts=32:48 status=written seconds=174.3
+split=test shard=4/4 contexts=48:64 status=written seconds=159.8
+head=mean step=1/1000 loss=0.561343 val=0.119789 best=0.119789@1
+head=mean step=200/1000 loss=0.123755 val=0.045221 best=0.045022@180
+head=mean step=400/1000 loss=0.122636 val=0.045711 best=0.045022@180
+head=mean step=600/1000 loss=0.123977 val=0.046188 best=0.045022@180
+head=mean step=800/1000 loss=0.113450 val=0.046463 best=0.045022@180
+head=mean step=1000/1000 loss=0.119804 val=0.046513 best=0.045022@180
+head=variance step=1/2000 loss=0.592572 val=0.444080 best=0.444080@1
+head=variance step=200/2000 loss=0.077545 val=0.104267 best=0.104267@200
+head=variance step=400/2000 loss=0.031270 val=0.070071 best=0.070071@400
+head=variance step=600/2000 loss=0.016864 val=0.061758 best=0.061758@600
+head=variance step=800/2000 loss=0.030879 val=0.092494 best=0.055980@720
+head=variance step=1000/2000 loss=0.011602 val=0.055271 best=0.055271@1000
+head=variance step=1200/2000 loss=0.011207 val=0.054543 best=0.054543@1200
+head=variance step=1400/2000 loss=0.011675 val=0.054086 best=0.054086@1400
+head=variance step=1600/2000 loss=0.011131 val=0.053839 best=0.053839@1600
+head=variance step=1800/2000 loss=0.011061 val=0.053768 best=0.053768@1800
+head=variance step=2000/2000 loss=0.011007 val=0.053768 best=0.053767@1960
+head=correlation step=1/2000 loss=0.158754 val_offdiag=0.502437 val_support=0.229456 best=0.502437@1
+head=correlation step=200/2000 loss=0.115778 val_offdiag=0.491218 val_support=0.196745 best=0.491218@200
+head=correlation step=400/2000 loss=0.116744 val_offdiag=0.490615 val_support=0.194869 best=0.490615@400
+head=correlation step=600/2000 loss=0.112268 val_offdiag=0.490851 val_support=0.195622 best=0.490615@400
+head=correlation step=800/2000 loss=0.107631 val_offdiag=0.491152 val_support=0.196580 best=0.490615@400
+head=correlation step=1000/2000 loss=0.108472 val_offdiag=0.491524 val_support=0.197754 best=0.490615@400
+head=correlation step=1200/2000 loss=0.110876 val_offdiag=0.491963 val_support=0.199133 best=0.490615@400
+head=correlation step=1400/2000 loss=0.110424 val_offdiag=0.492323 val_support=0.200253 best=0.490615@400
+head=correlation step=1600/2000 loss=0.108539 val_offdiag=0.492737 val_support=0.201541 best=0.490615@400
+head=correlation step=1800/2000 loss=0.110589 val_offdiag=0.493142 val_support=0.202792 best=0.490615@400
+head=correlation step=2000/2000 loss=0.109903 val_offdiag=0.493512 val_support=0.203931 best=0.490615@400
+[train] mean        best=0.045022@180 reports=51 roughness=0.000034 best_is_final=False
+[train] variance    best=0.053767@1960 reports=101 roughness=0.000083 best_is_final=False
+[train] correlation best=0.490615@400 reports=101 roughness=0.000059 best_is_final=False
+[test] mean        floor=0.0442 conditional=0.0335 ratio=0.759
+[test] variance    floor=0.0494 conditional=0.0398 ratio=0.805
+[test] correlation floor=0.1963 conditional=0.1429 ratio=0.728
+[test] floor-ratio exact_independent_split           var=1.000 cov=1.000
+[test] floor-ratio conditional_three_head            var=1.038 cov=1.003
+[test] floor-ratio analytic_correlation_three_head   var=1.035 cov=1.014
+[test] floor-ratio shuffled_input_features           var=9.806 cov=3.508
+[test] floor-ratio shared_three_head                 var=6.941 cov=2.502
+exit_code=0
+finished_utc=2026-08-26T06:49:23Z

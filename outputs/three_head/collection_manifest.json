@@ -1,0 +1,224 @@
+{
+  "schema_version": 1,
+  "complete": true,
+  "protocol_fingerprint": "3c19dfcca0e23268b435e782cbc020178433ef1bed7ec08a417e62038f02fb32",
+  "ideal_g_sha256": "57bb195dda04395a587ee0481ade84a0023fe2916251ba848f8fa3b49228be6a",
+  "records": [
+    {
+      "split": "train",
+      "shard_index": 0,
+      "start_context": 0,
+      "stop_context": 16,
+      "status": "written",
+      "path": "outputs\\three_head\\context_shards\\train\\contexts_0000_0015.pt",
+      "seconds": 44.20545959996525
+    },
+    {
+      "split": "train",
+      "shard_index": 1,
+      "start_context": 16,
+      "stop_context": 32,
+      "status": "written",
+      "path": "outputs\\three_head\\context_shards\\train\\contexts_0016_0031.pt",
+      "seconds": 42.63092719996348
+    },
+    {
+      "split": "train",
+      "shard_index": 2,
+      "start_context": 32,
+      "stop_context": 48,
+      "status": "written",
+      "path": "outputs\\three_head\\context_shards\\train\\contexts_0032_0047.pt",
+      "seconds": 46.401950999978
+    },
+    {
+      "split": "train",
+      "shard_index": 3,
+      "start_context": 48,
+      "stop_context": 64,
+      "status": "written",
+      "path": "outputs\\three_head\\context_shards\\train\\contexts_0048_0063.pt",
+      "seconds": 44.82022880006116
+    },
+    {
+      "split": "train",
+      "shard_index": 4,
+      "start_context": 64,
+      "stop_context": 80,
+      "status": "written",
+      "path": "outputs\\three_head\\context_shards\\train\\contexts_0064_0079.pt",
+      "seconds": 44.58501349994913
+    },
+    {
+      "split": "train",
+      "shard_index": 5,
+      "start_context": 80,
+      "stop_context": 96,
+      "status": "written",
+      "path": "outputs\\three_head\\context_shards\\train\\contexts_0080_0095.pt",
+      "seconds": 42.39214420004282
+    },
+    {
+      "split": "train",
+      "shard_index": 6,
+      "start_context": 96,
+      "stop_context": 112,
+      "status": "written",
+      "path": "outputs\\three_head\\context_shards\\train\\contexts_0096_0111.pt",
+      "seconds": 42.83145230007358
+    },
+    {
+      "split": "train",
+      "shard_index": 7,
+      "start_context": 112,
+      "stop_context": 128,
+      "status": "written",
+      "path": "outputs\\three_head\\context_shards\\train\\contexts_0112_0127.pt",
+      "seconds": 40.4345500000054
+    },
+    {
+      "split": "train",
+      "shard_index": 8,
+      "start_context": 128,
+      "stop_context": 144,
+      "status": "written",
+      "path": "outputs\\three_head\\context_shards\\train\\contexts_0128_0143.pt",
+      "seconds": 42.26571069995407
+    },
+    {
+      "split": "train",
+      "shard_index": 9,
+      "start_context": 144,
+      "stop_context": 160,
+      "status": "written",
+      "path": "outputs\\three_head\\context_shards\\train\\contexts_0144_0159.pt",
+      "seconds": 43.18052880000323
+    },
+    {
+      "split": "train",
+      "shard_index": 10,
+      "start_context": 160,
+      "stop_context": 176,
+      "status": "written",
+      "path": "outputs\\three_head\\context_shards\\train\\contexts_0160_0175.pt",
+      "seconds": 41.872900199959986
+    },
+    {
+      "split": "train",
+      "shard_index": 11,
+      "start_context": 176,
+      "stop_context": 192,
+      "status": "written",
+      "path": "outputs\\three_head\\context_shards\\train\\contexts_0176_0191.pt",
+      "seconds": 43.35750779998489
+    },
+    {
+      "split": "train",
+      "shard_index": 12,
+      "start_context": 192,
+      "stop_context": 208,
+      "status": "written",
+      "path": "outputs\\three_head\\context_shards\\train\\contexts_0192_0207.pt",
+      "seconds": 42.26715560001321
+    },
+    {
+      "split": "train",
+      "shard_index": 13,
+      "start_context": 208,
+      "stop_context": 224,
+      "status": "written",
+      "path": "outputs\\three_head\\context_shards\\train\\contexts_0208_0223.pt",
+      "seconds": 43.929814300034195
+    },
+    {
+      "split": "train",
+      "shard_index": 14,
+      "start_context": 224,
+      "stop_context": 240,
+      "status": "written",
+      "path": "outputs\\three_head\\context_shards\\train\\contexts_0224_0239.pt",
+      "seconds": 40.10859029996209
+    },
+    {
+      "split": "train",
+      "shard_index": 15,
+      "start_context": 240,
+      "stop_context": 256,
+      "status": "written",
+      "path": "outputs\\three_head\\context_shards\\train\\contexts_0240_0255.pt",
+      "seconds": 47.308892000000924
+    },
+    {
+      "split": "validation",
+      "shard_index": 0,
+      "start_context": 0,
+      "stop_context": 16,
+      "status": "written",
+      "path": "outputs\\three_head\\context_shards\\validation\\contexts_0000_0015.pt",
+      "seconds": 81.64906249998603
+    },
+    {
+      "split": "validation",
+      "shard_index": 1,
+      "start_context": 16,
+      "stop_context": 32,
+      "status": "written",
+      "path": "outputs\\three_head\\context_shards\\validation\\contexts_0016_0031.pt",
+      "seconds": 83.99446289998014
+    },
+    {
+      "split": "validation",
+      "shard_index": 2,
+      "start_context": 32,
+      "stop_context": 48,
+      "status": "written",
+      "path": "outputs\\three_head\\context_shards\\validation\\contexts_0032_0047.pt",
+      "seconds": 88.26129619998392
+    },
+    {
+      "split": "validation",
+      "shard_index": 3,
+      "start_context": 48,
+      "stop_context": 64,
+      "status": "written",
+      "path": "outputs\\three_head\\context_shards\\validation\\contexts_0048_0063.pt",
+      "seconds": 85.18326840002555
+    },
+    {
+      "split": "test",
+      "shard_index": 0,
+      "start_context": 0,
+      "stop_context": 16,
+      "status": "written",
+      "path": "outputs\\three_head\\context_shards\\test\\contexts_0000_0015.pt",
+      "seconds": 167.33656940003857
+    },
+    {
+      "split": "test",
+      "shard_index": 1,
+      "start_context": 16,
+      "stop_context": 32,
+      "status": "written",
+      "path": "outputs\\three_head\\context_shards\\test\\contexts_0016_0031.pt",
+      "seconds": 161.97645740001462
+    },
+    {
+      "split": "test",
+      "shard_index": 2,
+      "start_context": 32,
+      "stop_context": 48,
+      "status": "written",
+      "path": "outputs\\three_head\\context_shards\\test\\contexts_0032_0047.pt",
+      "seconds": 174.3102737000445
+    },
+    {
+      "split": "test",
+      "shard_index": 3,
+      "start_context": 48,
+      "stop_context": 64,
+      "status": "written",
+      "path": "outputs\\three_head\\context_shards\\test\\contexts_0048_0063.pt",
+      "seconds": 159.82168689998798
+    }
+  ]
+}

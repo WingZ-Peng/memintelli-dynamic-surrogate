@@ -1,0 +1,8 @@
+# The pipeline itself needs only torch. numpy and matplotlib are imported by the
+# vendored upstream simulator under memintelli_surrogate_comparison/upstream/.
+#
+# torch is deliberately unpinned here because the right build depends on your
+# GPU. Install it first, from https://pytorch.org, matching your CUDA version;
+# see the README for the exact command used to produce the published result.
+numpy>=1.22,<2
+matplotlib
